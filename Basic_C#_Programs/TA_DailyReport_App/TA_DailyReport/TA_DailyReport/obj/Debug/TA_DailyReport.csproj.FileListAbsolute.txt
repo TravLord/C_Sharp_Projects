@@ -1,0 +1,7 @@
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\TA_DailyReport_App\TA_DailyReport\TA_DailyReport\bin\Debug\TA_DailyReport.exe.config
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\TA_DailyReport_App\TA_DailyReport\TA_DailyReport\bin\Debug\TA_DailyReport.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\TA_DailyReport_App\TA_DailyReport\TA_DailyReport\bin\Debug\TA_DailyReport.pdb
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\TA_DailyReport_App\TA_DailyReport\TA_DailyReport\obj\Debug\TA_DailyReport.csproj.AssemblyReference.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\TA_DailyReport_App\TA_DailyReport\TA_DailyReport\obj\Debug\TA_DailyReport.csproj.CoreCompileInputs.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\TA_DailyReport_App\TA_DailyReport\TA_DailyReport\obj\Debug\TA_DailyReport.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\TA_DailyReport_App\TA_DailyReport\TA_DailyReport\obj\Debug\TA_DailyReport.pdb
