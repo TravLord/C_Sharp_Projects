@@ -35,21 +35,14 @@ namespace ConsoleApp_DoWhileStmt
             bool UnameConv = Convert.ToBoolean(Uname);
             if (UnameConv == true)
             {
-
-
                 do
                 {
                     Console.WriteLine("Hi there human!");
                     break;
                 }
                 while (UnameConv == true);
-
-                {
-
-                }
-            }
-           
-          
+                
+            }             
         }
     }
 }
