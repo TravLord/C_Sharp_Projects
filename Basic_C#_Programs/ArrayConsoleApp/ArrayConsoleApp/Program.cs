@@ -10,8 +10,8 @@ namespace ArrayConsoleApp
     {
         static void Main(string[] args)
         {
-            // initializing boolean and do while loop for restarting program and ending program capability
-            // when incorrect input entered by user
+            // initializing boolean and do while loop for restarting program and ending program capability,
+            // when incorrect input entered by user error message displayed
             bool restart = false;
             do
             {
@@ -27,7 +27,7 @@ namespace ArrayConsoleApp
                                     "Research, Isolate, integrate, review, change, repeat."};
 
 
-                //Prints to console the user selected string (converted to int)
+                // Prints to console the user selected string (converted to int)
                 // If input incorrect corresponding message given while program is restarted
                 // If correct program flow continues to next question
                 if (InxSelectConv > 5 )
@@ -75,7 +75,7 @@ namespace ArrayConsoleApp
                 StringyListy.Add("Cranky");
                 StringyListy.Add("Sad");
 
-                if (SalInxConv > 5)
+                if (MoodIndConv > 5)
                 {
                     Console.WriteLine("Incorrect choice, must be a number between 0 and 5");
                     restart = true;
