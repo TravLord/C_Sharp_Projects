@@ -12,21 +12,29 @@ namespace _6ptConsoleApp
             //pt 1 and pt2 - user adds text 
 
             Console.WriteLine("Please add some text.  Any info will do.");
-            string addText = Console.ReadLine();
+            string addUserText = Console.ReadLine();
 
-            string[] StringArray = { "When", "Why", "Where", "How" };
+            string[] StringArray = { "When ", "Why ", "Where ", "How " };
 
             // This loop checks if user has added text and if they have ,
-            // in nested loop by concatenation the text is
-            // added to the end of each index in the array and printed to console
+            // in nested loop the text is added to the string array values
+            // and printed to console
 
             for (int i = 0; i < StringArray.Length; i++)
             {
-                if (addText != null)
+                if (addUserText != null)
                 {
-                    string txtAdded = StringArray[i] + " " + addText;
-                    Console.WriteLine(txtAdded);
+                    StringArray[i] +=  addUserText;                   
                 }
+            }
+
+            // This loop iterates through the user
+            // modified stringarray values and prints each result on a newline
+            for(int i = 0; i < StringArray.Length; i++)
+            {
+                StringArray[i] += Environment.NewLine;
+
+                Console.WriteLine(StringArray[i]);
             }
             // if length of stringarray is more characters then first declared (15chars) then addition must
             // have been made, then break ends loop. 
@@ -43,12 +51,22 @@ namespace _6ptConsoleApp
             Console.WriteLine("\nClick enter for next loop.");
             Console.ReadLine();
 
-            foreach (string word in StringArray)
+            // pt3 loop using less than operator to determine wether to continue
+            for (int i = 0; i < 3; i++)
             {
-                if (word.Length <= 3)
-                {
-                    Console.WriteLine("Printing only words in string array <= 3 characters long --> " + word);
-                }
+                   
+               Console.WriteLine("Three interations.....");              
+            }
+
+            Console.WriteLine("\nClick enter for next loop.");
+            Console.ReadLine();
+
+
+            //pt3 loop using <= operator
+
+            for (int j=0; j <= 6; j++)
+            {
+                Console.WriteLine("Gimmie a seven!!!!");
             }
 
             //pt4 Search for fruit in list by user input - string list
@@ -72,8 +90,8 @@ namespace _6ptConsoleApp
                 for (int i = 0; i < FruitList.Count; i++)
                 {
                     if (fruitSearchToLowC == FruitList[i])
-                    {
-                        Console.WriteLine("You picked a " + FruitList[i].ToUpper() + "! That was in the list congrats!");
+                    {                                                           // item index after item value
+                        Console.WriteLine("\nYou picked a " + FruitList[i].ToUpper() + " at index -> "+ i );
                         isTermCorrect = true;
                         restart = false;
                         break;
@@ -102,7 +120,7 @@ namespace _6ptConsoleApp
                 Console.WriteLine("\n\nEnter a kind of animal you would like to search for. \nchoices--> cat, dog, bird, turtle, snake, hamster");        
                 string animalSearchQ = Console.ReadLine();
                 string animalSearchToLowC = animalSearchQ.ToLower();
-                bool WrongInput = false;
+                bool isCorrectInput = false;
 
                 // for loop goes through asks if user entry is equal to index value
                 // if equal it prints of each value with associated index next to it
@@ -112,11 +130,11 @@ namespace _6ptConsoleApp
                     if (PetList[i] == animalSearchToLowC)
                     {
                     Console.WriteLine(PetList[i] + " " + i);
-                    WrongInput = true;
+                    isCorrectInput = true;
                     restartAnimal = false;
                     }
                 }
-                    if (WrongInput == false | animalSearchToLowC == null)
+                    if (isCorrectInput == false | animalSearchToLowC == null)
                     {
                   
                     Console.WriteLine("Incorrect not a valid choice. Please try again.");
