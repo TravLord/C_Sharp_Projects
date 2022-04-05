@@ -1,0 +1,7 @@
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\6ptConsoleApp\6ptConsoleApp\bin\Debug\6ptConsoleApp.exe.config
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\6ptConsoleApp\6ptConsoleApp\bin\Debug\6ptConsoleApp.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\6ptConsoleApp\6ptConsoleApp\bin\Debug\6ptConsoleApp.pdb
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\6ptConsoleApp\6ptConsoleApp\obj\Debug\6ptConsoleApp.csproj.AssemblyReference.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\6ptConsoleApp\6ptConsoleApp\obj\Debug\6ptConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\6ptConsoleApp\6ptConsoleApp\obj\Debug\6ptConsoleApp.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\6ptConsoleApp\6ptConsoleApp\obj\Debug\6ptConsoleApp.pdb
