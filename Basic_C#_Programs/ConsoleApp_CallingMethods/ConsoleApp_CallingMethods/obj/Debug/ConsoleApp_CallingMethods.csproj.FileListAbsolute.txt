@@ -1,0 +1,7 @@
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ConsoleApp_CallingMethods\ConsoleApp_CallingMethods\obj\Debug\ConsoleApp_CallingMethods.csproj.AssemblyReference.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ConsoleApp_CallingMethods\ConsoleApp_CallingMethods\obj\Debug\ConsoleApp_CallingMethods.csproj.CoreCompileInputs.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ConsoleApp_CallingMethods\ConsoleApp_CallingMethods\bin\Debug\ConsoleApp_CallingMethods.exe.config
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ConsoleApp_CallingMethods\ConsoleApp_CallingMethods\bin\Debug\ConsoleApp_CallingMethods.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ConsoleApp_CallingMethods\ConsoleApp_CallingMethods\bin\Debug\ConsoleApp_CallingMethods.pdb
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ConsoleApp_CallingMethods\ConsoleApp_CallingMethods\obj\Debug\ConsoleApp_CallingMethods.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ConsoleApp_CallingMethods\ConsoleApp_CallingMethods\obj\Debug\ConsoleApp_CallingMethods.pdb
