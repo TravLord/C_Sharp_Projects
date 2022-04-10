@@ -1,7 +1,0 @@
-C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\MethodClassConsoleApp\MethodClassConsoleApp\bin\Debug\MethodClassConsoleApp.exe.config
-C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\MethodClassConsoleApp\MethodClassConsoleApp\bin\Debug\MethodClassConsoleApp.exe
-C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\MethodClassConsoleApp\MethodClassConsoleApp\bin\Debug\MethodClassConsoleApp.pdb
-C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\MethodClassConsoleApp\MethodClassConsoleApp\obj\Debug\MethodClassConsoleApp.csproj.AssemblyReference.cache
-C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\MethodClassConsoleApp\MethodClassConsoleApp\obj\Debug\MethodClassConsoleApp.csproj.CoreCompileInputs.cache
-C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\MethodClassConsoleApp\MethodClassConsoleApp\obj\Debug\MethodClassConsoleApp.exe
-C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\MethodClassConsoleApp\MethodClassConsoleApp\obj\Debug\MethodClassConsoleApp.pdb
