@@ -1,0 +1,7 @@
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\AbstractClass-ConsoleApp\AbstractClass-ConsoleApp\bin\Debug\AbstractClass-ConsoleApp.exe.config
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\AbstractClass-ConsoleApp\AbstractClass-ConsoleApp\bin\Debug\AbstractClass-ConsoleApp.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\AbstractClass-ConsoleApp\AbstractClass-ConsoleApp\bin\Debug\AbstractClass-ConsoleApp.pdb
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\AbstractClass-ConsoleApp\AbstractClass-ConsoleApp\obj\Debug\AbstractClass-ConsoleApp.csproj.AssemblyReference.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\AbstractClass-ConsoleApp\AbstractClass-ConsoleApp\obj\Debug\AbstractClass-ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\AbstractClass-ConsoleApp\AbstractClass-ConsoleApp\obj\Debug\AbstractClass-ConsoleApp.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\AbstractClass-ConsoleApp\AbstractClass-ConsoleApp\obj\Debug\AbstractClass-ConsoleApp.pdb
