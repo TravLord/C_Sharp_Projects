@@ -13,6 +13,9 @@ namespace AbstractClass_ConsoleApp
             // intializing employee object with values and calling abstract method sayName to display to console
             Employee employee = new Employee() { firstName = "Sample", lastName = "Student" };
             employee.sayName();
+
+            IQuitable quit = new Employee(); // object of interface type istantiated
+            quit.Quit();   // inherited method call
         }
     }
 }
