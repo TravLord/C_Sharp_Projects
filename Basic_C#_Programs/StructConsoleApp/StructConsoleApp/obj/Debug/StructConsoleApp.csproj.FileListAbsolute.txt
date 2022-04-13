@@ -1,0 +1,7 @@
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\StructConsoleApp\StructConsoleApp\bin\Debug\StructConsoleApp.exe.config
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\StructConsoleApp\StructConsoleApp\bin\Debug\StructConsoleApp.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\StructConsoleApp\StructConsoleApp\bin\Debug\StructConsoleApp.pdb
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\StructConsoleApp\StructConsoleApp\obj\Debug\StructConsoleApp.csproj.AssemblyReference.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\StructConsoleApp\StructConsoleApp\obj\Debug\StructConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\StructConsoleApp\StructConsoleApp\obj\Debug\StructConsoleApp.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\StructConsoleApp\StructConsoleApp\obj\Debug\StructConsoleApp.pdb

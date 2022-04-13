@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructConsoleApp", "StructConsoleApp\StructConsoleApp.csproj", "{01E06E57-4675-411B-842C-E8623670CEA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01E06E57-4675-411B-842C-E8623670CEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E06E57-4675-411B-842C-E8623670CEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E06E57-4675-411B-842C-E8623670CEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E06E57-4675-411B-842C-E8623670CEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E135F868-3A60-4BE3-8FB0-F725E0B144F9}
+	EndGlobalSection
+EndGlobal
