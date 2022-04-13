@@ -1,0 +1,7 @@
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ParsingEnumsConsoleApp\ParsingEnumsConsoleApp\bin\Debug\ParsingEnumsConsoleApp.exe.config
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ParsingEnumsConsoleApp\ParsingEnumsConsoleApp\bin\Debug\ParsingEnumsConsoleApp.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ParsingEnumsConsoleApp\ParsingEnumsConsoleApp\bin\Debug\ParsingEnumsConsoleApp.pdb
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ParsingEnumsConsoleApp\ParsingEnumsConsoleApp\obj\Debug\ParsingEnumsConsoleApp.csproj.AssemblyReference.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ParsingEnumsConsoleApp\ParsingEnumsConsoleApp\obj\Debug\ParsingEnumsConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ParsingEnumsConsoleApp\ParsingEnumsConsoleApp\obj\Debug\ParsingEnumsConsoleApp.exe
+C:\Users\travi\OneDrive\Documents\C_Sharp_Projects\Basic_C#_Programs\ParsingEnumsConsoleApp\ParsingEnumsConsoleApp\obj\Debug\ParsingEnumsConsoleApp.pdb
