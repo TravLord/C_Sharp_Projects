@@ -26,11 +26,13 @@ namespace LambdaFunctionsConsoleApp
 
             //finding all employees with the firstname joe in list using foreach and nested if loop
             //then adding each employee to a new list 
+            List<Employee> JoeList = new List<Employee>();
+
             foreach (var worker in listEmployee)
             {
                 if (worker.firstName == "Joe")
                 {
-                    List<Employee> JoeList = new List<Employee>();
+                    
                     JoeList.Add(worker);
                     Console.WriteLine(worker.firstName);
                 }
@@ -42,6 +44,7 @@ namespace LambdaFunctionsConsoleApp
 
             foreach (Employee employee in newList)
             {
+                
                 Console.WriteLine(employee.firstName);
             }
 
@@ -51,6 +54,7 @@ namespace LambdaFunctionsConsoleApp
 
             foreach (Employee employee in EmpIdList)
             {
+                
                 Console.WriteLine(employee.Id);
             }
 
