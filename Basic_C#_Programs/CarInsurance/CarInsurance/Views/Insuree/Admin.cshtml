@@ -1,0 +1,38 @@
+﻿@using CarInsurance.Models
+
+@model List<Insuree>
+
+<div class="row no-gutters" m-3>
+    <!--// returning a List from Db/Model  -->
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Customer Monthly Insurance Quotes</h5>
+        </div>
+        <div class="card-body">
+            @foreach (var insuree in Model)
+            {
+                using (Html.BeginForm())
+                {
+                    <!--passing (hidden) id to controller method-->
+                    <input type="hidden" name="Id" value="@insuree.FirstName" />
+                    <div class="row mb-3">
+                        <!--Margin bottom 3-->
+                        <div class="col">
+                            @insuree.LastName <!--Normal bs column layout = 12 columns wide adding 2 cols to 1st div and 4 to 3rd making bs figures 2nd and 4th both have 3 cols wide-->
+                        </div>
+                        <div class="col">
+                            @insuree.EmailAddress
+                        </div>
+                        <div class="col-4">
+                            @insuree.Quote
+                        </div>
+
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+
+
