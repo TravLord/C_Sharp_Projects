@@ -126,19 +126,21 @@ namespace CarInsurance.Controllers
         
         public ActionResult Admin()
         {
-            using (InsuranceEntities db = new InsuranceEntities())
+            using (InsuranceEntities db = new InsuranceEntities()) // This method will calculate an insurance quote based off of several factors tied to Database entries 
             {
                 DateTime ageCutOff18 = DateTime.Now.AddYears(-18); // creating each datetime object for use in lambda expressions
                 DateTime ageCuttOff19 = DateTime.Now.AddYears(-19); // for age quote rate value scale
                 DateTime ageCuttOff25 = DateTime.Now.AddYears(-25);
                 Decimal monthlyBase = 50.00m; //base dollar amount to charge for quote
                 var QuoteTotals = new List<Insuree>(); // list to add to for multiple all objects to be displayed
-                var insuree = new Insuree(); // object to add to above list after quote rates are calculated
+                 // object to add to above list after quote rates are calculated
                 foreach (var ActiveCust in db.Insurees)
                 {
+                    var insuree = new Insuree();
                     var Under18 = db.Insurees.Where(x => x.DateOfBirth > ageCutOff18).ToList();
                     foreach (var custInsuree in Under18)
                     {
+                        
                         if (custInsuree.DateOfBirth > ageCutOff18)
                         {
                             decimal fee = 100.00m; //add $100 to total if under 18
