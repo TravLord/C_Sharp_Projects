@@ -52,23 +52,20 @@ namespace CarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
-                insuree.Quote = 50.0m; // $50 base quote amount for all customers added to quote // creating each datetime object for use in age checks
-                DateTime ageCutOff18 = DateTime.Now.AddYears(-18); //user age 18 
-                DateTime ageCuttOff19 = DateTime.Now.AddYears(-19); //user age 19
-                DateTime ageCuttOff25 = DateTime.Now.AddYears(-25); //user age 25
-                /*var QuoteTotals = new List<Insuree>();*/ // list to add to for multiple all objects to be displayed
-                                                           // object to add to above list after quote rates are calculated
-                if (insuree.DateOfBirth > ageCutOff18)
+                insuree.Quote = 50.0m; // $50 base quote amount for all customers added to quote                                                      
+                int age = DateTime.Now.Year - insuree.DateOfBirth.Year; //calculating user age
+
+                if (age < 18) // if user is under 18 add $100, over 19 and under 25 add $50, over 25 add $25
                 {
-                    decimal newQuoteAmount = insuree.Quote + 50.00m; //add $50 to total if under 18
+                    decimal newQuoteAmount = insuree.Quote + 100.00m; //add $100 to total if under 18
                     insuree.Quote = newQuoteAmount;
                 }
-                if (insuree.DateOfBirth <= ageCuttOff19 && insuree.DateOfBirth >= ageCuttOff25)
+                else if (age >= 19 && age <= 25)
                 {
                     decimal newQuoteAmount = insuree.Quote + 50.00m; //add $50 to total if over 19 and under 25 years old
                     insuree.Quote = newQuoteAmount;
                 }
-                if (insuree.DateOfBirth < ageCuttOff25)
+                else
                 {
                     decimal newQuoteAmount = insuree.Quote + 25.00m; //add $25 to total if over 25 years old
                     insuree.Quote = newQuoteAmount;
@@ -88,6 +85,13 @@ namespace CarInsurance.Controllers
                     decimal newQuoteAmount = insuree.Quote + 25.00m; //add $25 to total if Car model is 911 carrera
                     insuree.Quote = newQuoteAmount;
                 }
+                if (insuree.DUI == true)
+                { 
+                    insuree.Quote = insuree.Quote + (insuree.Quote * .25m);
+                    //add 25% to quote if user has had DUI
+                }
+
+            
                 if (insuree.SpeedingTickets > 0)
                 {
                     decimal fee = insuree.SpeedingTickets * 10.00m; //adding $10 per speeding ticket to quote
@@ -96,8 +100,8 @@ namespace CarInsurance.Controllers
                 }
                 if (insuree.CoverageType == true)
                 {
-                    decimal newQuoteAmount = insuree.Quote * .50m; //adding 50% increase to quote
-                    insuree.Quote = newQuoteAmount;
+                    insuree.Quote = insuree.Quote + (insuree.Quote * .50m);
+                    //add 25% to quote if user has full coverage
                 }
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
