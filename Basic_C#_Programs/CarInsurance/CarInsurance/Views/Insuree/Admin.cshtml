@@ -3,39 +3,36 @@
 
 
 <div class="row no-gutters" m-3>
-    @Styles.Render("~/Content/css")
+   
     <!--// returning a List from Db/Model  -->
-    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
-        <div class="card-header text-center">
-            <h2 class="m-0">Customer Monthly Insurance Quotes</h2>
-        </div>
-        <div class="card-body">
-            @foreach (var insuree in Model)
-            {
-                using (Html.BeginForm())
-                {
-                    <!--passing (hidden) id to controller method-->
-                    <input type="hidden" name="Id" value="@insuree.Id" />
-                    <div class="row mb-3">
-                        <!--Margin bottom 3-->
-                        <div class="col">
-                            <h3> First Name: @insuree.FirstName</h3> <!--Normal bs column layout = 12 columns wide adding 2 cols to 1st div and 4 to 3rd making bs figures 2nd and 4th both have 3 cols wide-->
-                        </div>
-                        <div class="col">
-                            <h3> Last Name: @insuree.LastName</h3>
-                        </div>
-                        <div class="col">
-                            <h3> Email Address: @insuree.EmailAddress</h3>
-                        </div>
-                        <div class="col-4">
-                            <h3> Quote Total: $@insuree.Quote</h3>
-                        </div>
+    <div class="card-body">
+        <table class="table">
+                
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</</th>
+                        <th>Email Address</th>
+                        <th>Quote Total</th>
+                    </tr>
+                </thead>
+                    
+                <tbody>
 
-                    </div>
-                }
-            }
-        </div>
+                    @foreach (var insuree in Model)
+                    {
+                        <tr>
+                            <td> @insuree.FirstName</td>
+                            <td> @insuree.LastName</td>
+                            <td> @insuree.EmailAddress</td>
+                            <td> $@insuree.Quote</td>
+                        </tr>
+                    }
+
+                </tbody>
+         </table>
     </div>
+    
 </div>
 
 

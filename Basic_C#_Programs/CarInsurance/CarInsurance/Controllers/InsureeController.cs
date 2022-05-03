@@ -38,6 +38,8 @@ namespace CarInsurance.Controllers
         // GET: Insuree/Create
         public ActionResult Create()
         {
+
+            
             return View();
         }
 
@@ -50,11 +52,57 @@ namespace CarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
+                insuree.Quote = 50.0m; // $50 base quote amount for all customers added to quote // creating each datetime object for use in age checks
+                DateTime ageCutOff18 = DateTime.Now.AddYears(-18); //user age 18 
+                DateTime ageCuttOff19 = DateTime.Now.AddYears(-19); //user age 19
+                DateTime ageCuttOff25 = DateTime.Now.AddYears(-25); //user age 25
+                /*var QuoteTotals = new List<Insuree>();*/ // list to add to for multiple all objects to be displayed
+                                                           // object to add to above list after quote rates are calculated
+                if (insuree.DateOfBirth > ageCutOff18)
+                {
+                    decimal newQuoteAmount = insuree.Quote + 50.00m; //add $50 to total if under 18
+                    insuree.Quote = newQuoteAmount;
+                }
+                if (insuree.DateOfBirth <= ageCuttOff19 && insuree.DateOfBirth >= ageCuttOff25)
+                {
+                    decimal newQuoteAmount = insuree.Quote + 50.00m; //add $50 to total if over 19 and under 25 years old
+                    insuree.Quote = newQuoteAmount;
+                }
+                if (insuree.DateOfBirth < ageCuttOff25)
+                {
+                    decimal newQuoteAmount = insuree.Quote + 25.00m; //add $25 to total if over 25 years old
+                    insuree.Quote = newQuoteAmount;
+                }
+                if (insuree.CarYear < 2000)
+                {
+                    decimal newQuoteAmount = insuree.Quote + 25.00m; //add $25 to total if car year before 2000
+                    insuree.Quote = newQuoteAmount;
+                }
+                if (insuree.CarMake == "Porsche")
+                {
+                    decimal newQuoteAmount = insuree.Quote + 25.00m; //add $25 if car make porsche
+                    insuree.Quote = newQuoteAmount;
+                }
+                if (insuree.CarModel == "911 Carrera")
+                {
+                    decimal newQuoteAmount = insuree.Quote + 25.00m; //add $25 to total if Car model is 911 carrera
+                    insuree.Quote = newQuoteAmount;
+                }
+                if (insuree.SpeedingTickets > 0)
+                {
+                    decimal fee = insuree.SpeedingTickets * 10.00m; //adding $10 per speeding ticket to quote
+                    decimal newQuoteAmount = insuree.Quote + fee;
+                    insuree.Quote = newQuoteAmount;
+                }
+                if (insuree.CoverageType == true)
+                {
+                    decimal newQuoteAmount = insuree.Quote * .50m; //adding 50% increase to quote
+                    insuree.Quote = newQuoteAmount;
+                }
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(insuree);
         }
 
@@ -125,119 +173,8 @@ namespace CarInsurance.Controllers
         }
         
         public ActionResult Admin()
-        {
-            using (InsuranceEntities db = new InsuranceEntities()) // This method will calculate an insurance quote based off of several factors tied to Database entries 
-            {
-                DateTime ageCutOff18 = DateTime.Now.AddYears(-18); // creating each datetime object for use in lambda expressions
-                DateTime ageCuttOff19 = DateTime.Now.AddYears(-19); // for age quote rate value scale
-                DateTime ageCuttOff25 = DateTime.Now.AddYears(-25);
-                Decimal monthlyBase = 50.00m; //base dollar amount to charge for quote
-                var QuoteTotals = new List<Insuree>(); // list to add to for multiple all objects to be displayed
-                 // object to add to above list after quote rates are calculated
-                foreach (var ActiveCust in db.Insurees)
-                {
-                    var insuree = new Insuree();
-                    var Under18 = db.Insurees.Where(x => x.DateOfBirth > ageCutOff18).ToList();
-                    foreach (var custInsuree in Under18)
-                    {
-                        
-                        if (custInsuree.DateOfBirth > ageCutOff18)
-                        {
-                            decimal fee = 100.00m; //add $100 to total if under 18
-                            decimal monthlyBase18 = custInsuree.Quote + fee; //adding in fee to Insuree quote
-                            custInsuree.Quote = monthlyBase18;
-                        }
-                    }
-                    var Under19below25 = db.Insurees.Where(x => x.DateOfBirth <= ageCuttOff19 && x.DateOfBirth >= ageCuttOff25).ToList();
-                    foreach (var custInsuree in Under19below25)
-                    {
-                        if (custInsuree.DateOfBirth <= ageCuttOff19 && custInsuree.DateOfBirth >= ageCuttOff25)
-                        {
-                            decimal fee = 50.00m; //add $50 to total if over 19 and under 25 years old
-                            decimal monthlyBase19_25 = custInsuree.Quote + fee;
-                            custInsuree.Quote = monthlyBase19_25;
-                        }
-                    }
-                    var Over25 = db.Insurees.Where(x => x.DateOfBirth < ageCuttOff25).ToList();
-                    foreach (var custInsuree in Over25)
-                    {
-                        if (custInsuree.DateOfBirth < ageCuttOff25)
-                        {
-                            decimal fee = 25.00m; //add $25 to total if over 25 years old
-                            decimal monthlyBaseOver25 = custInsuree.Quote + fee;
-                            custInsuree.Quote = monthlyBaseOver25;
-                        }
-                    }
-                    var carYearBefore = db.Insurees.Where(x => x.CarYear < 2000).ToList();
-                    foreach (var custInsuree in carYearBefore)
-                    {
-                        if (custInsuree.CarYear > 2000)
-                        {
-                            decimal fee = 25.00m; //add $25 to total if car year is before year 2000
-                            decimal monthlyBaseCarYearBefore = custInsuree.Quote + fee;
-                            custInsuree.Quote = monthlyBaseCarYearBefore;
-                        }
-                    }
-                    var CarMakePorsche = db.Insurees.Where(x => x.CarMake == "Porsche").ToList();
-                    foreach (var custInsuree in CarMakePorsche)
-                    {
-                        if (custInsuree.CarMake == "Porsche")
-                        {
-                            decimal fee = 25.00m; //add $25 to total if car is make porsche
-                            decimal monthlyBaseCarMakePorsche = custInsuree.Quote + fee;
-                            custInsuree.Quote = monthlyBaseCarMakePorsche;
-                        }
-                    }
-                    var CarModelCarrera = db.Insurees.Where(x => x.CarModel == "911 Carrera").ToList();
-                    foreach (var custInsuree in CarModelCarrera)
-                    {
-                        if (custInsuree.CarModel == "911 Carrera")
-                        {
-                            decimal fee = 25.00m; //add $25 to total if Car model is 911 carrera
-                            decimal monthlyBaseCarMakePorsche = custInsuree.Quote + fee;
-                            custInsuree.Quote = monthlyBaseCarMakePorsche;
-                        }
-                    }
-                    var SpeedTicketCount = db.Insurees.Where(x => x.SpeedingTickets > 0).ToList();
-                    foreach (var custInsuree in SpeedTicketCount)
-                    {
-                        if (custInsuree.SpeedingTickets > 0)
-                        {
-                            decimal fee = custInsuree.SpeedingTickets * 10.00m; //adding $10 per speeding ticket to quote
-                            decimal monthlyBaseCarMakePorsche = custInsuree.Quote + fee;
-                            custInsuree.Quote = monthlyBaseCarMakePorsche;
-                        }
-                    }
-                    var FullCoverage = db.Insurees.Where(x => x.CoverageType == true);
-                    foreach (var custInsuree in FullCoverage)
-                    {
-                        if (custInsuree.CoverageType == true)
-                        {
-                            decimal fee = .50m; // add 50 percent to quote if full coverage checked
-                            decimal monthlyBaseFullCov = custInsuree.Quote * fee;
-                            custInsuree.Quote = monthlyBaseFullCov;
-                        }
-                    }
-                    insuree.Id = ActiveCust.Id;  // mapping properties between objects for display
-                    insuree.FirstName = ActiveCust.FirstName;
-                    insuree.LastName = ActiveCust.LastName;
-                    insuree.EmailAddress = ActiveCust.EmailAddress;
-                    insuree.DateOfBirth = ActiveCust.DateOfBirth;
-                    insuree.CarYear = ActiveCust.CarYear;
-                    insuree.CarMake = ActiveCust.CarMake;
-                    insuree.CarModel = ActiveCust.CarModel;
-                    insuree.DUI = ActiveCust.DUI;
-                    insuree.SpeedingTickets = ActiveCust.SpeedingTickets;
-                    insuree.CoverageType = ActiveCust.CoverageType;
-                    insuree.Quote = ActiveCust.Quote;
-                    QuoteTotals.Add(insuree);
-                    decimal addBase = insuree.Quote + monthlyBase; //adding in monthly base quote amount $50
-                    insuree.Quote = addBase;
-                }
-
-                return View(QuoteTotals); //returning new list to view
-                //return View(db.Insurees.ToList());  // verified method is returning to correct view and will popualate info, problem must be with my method 
-            }
+        {           
+            return View(db.Insurees.ToList()); //returning new list to view                        
         }
     }
 }
