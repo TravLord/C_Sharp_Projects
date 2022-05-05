@@ -17,7 +17,7 @@
 
 > ## Twenty One Card Game Console App
 > - Fully functional twenty one card game 
-> - Languages and frameworks used Front end- HTML, BootStrap4, CSS Back end- C# , SQL DataBase with 
+> - Languages and frameworks used Front end- HTML, BootStrap4, CSS Back end- C# , SQL DataBase with ADO.NET Entity Framework
 > - utilizing inheritance, interfaces, polymorphism, SQL queries, StreamReader/Writer and more.
 > - One player against dealer 
 > - Full deck of cards randomly shuffled using method then dealt
