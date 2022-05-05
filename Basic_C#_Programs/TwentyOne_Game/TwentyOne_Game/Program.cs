@@ -14,28 +14,24 @@ namespace TwentyOne_Game
     class Program
     {
         static void Main(string[] args)
-        {
-            
-            
-            const string casinoName = "Grand Hotel and Casino"; //constants value can never be changed.
+        {           
+            const string casinoName = "Grand Hotel and Casino"; //constants immutable
             Console.WriteLine("Welcome to the {0}.  Lets' start by telling me your name.", casinoName);
             string playerName = Console.ReadLine();
             if (playerName.ToLower() == "admin")
             {
-                List<ExceptionEntity> Exceptions = ReadExceptions(); // this method will create a list composed of all exceptions logged to Db
+                List<ExceptionEntity> Exceptions = ReadExceptions(); // this method will create a list composed of all exceptions logged to Database
                 foreach (var exception in Exceptions)
                 {
                     Console.WriteLine();
                     Console.Write(exception.Id +" | ");
                     Console.Write(exception.ExceptionType +"|");
                     Console.Write(exception.ExceptionMessage +" | ");
-                    Console.Write(exception.TimeStamp +" | ");
-                                      
+                    Console.Write(exception.TimeStamp +" | ");                                    
                 }
                 Console.Read();
                 return;
             }
-
             bool validAnswer = false;
             int bank = 0;
             while (!validAnswer)
@@ -69,14 +65,14 @@ namespace TwentyOne_Game
                         Console.WriteLine(ex.Message);
                         UpdateDbWithException(ex);  //passes in exception parameter to Db method
                         Console.ReadLine();
-                        return; // ends program , when in a void method 
+                        return; // ends program , in a void method 
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine("An error occured, please contact your system admin.");
                         UpdateDbWithException(ex);
                         Console.ReadLine();
-                        return; // ends program , when in a void method 
+                        return; // ends program , in a void method 
                     }
                 }
                 game -= player;  // removing player from game because they are not activley paying or have no money left
@@ -97,7 +93,6 @@ namespace TwentyOne_Game
                                   (@ExceptionType, @ExceptionMessage, @TimeStamp)";
 
             using (SqlConnection connection = new SqlConnection(connectionString)) //this will shut off resources from being used and will shut off connection
-
             {
                 SqlCommand command = new SqlCommand(queryString, connection); // by using parameters in connection you protect from sql injection
                 command.Parameters.Add("@ExceptionType", SqlDbType.VarChar);
@@ -111,7 +106,6 @@ namespace TwentyOne_Game
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
-
             }
         }
         private static List<ExceptionEntity> ReadExceptions()  // this method will query the Db get all exceptions and put them into a list and display them
@@ -130,7 +124,6 @@ namespace TwentyOne_Game
                 SqlCommand command = new SqlCommand(queryString, connection);
 
                 connection.Open();
-
                 SqlDataReader reader = command.ExecuteReader();  // reads exception data, ex3cuting reader and assgining reader obj to read
 
                 while (reader.Read())
@@ -144,10 +137,7 @@ namespace TwentyOne_Game
                 }
                 connection.Close(); //  close connection , free up resources
             }
-
             return Exceptions;  // returns list of exception entitys
-
-
         }
     }
 }
