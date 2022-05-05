@@ -2,7 +2,6 @@
 ### This repository contains all of my current C# projects and applications.
 
 > ## Car Insurance Web app
-
 > - Model View Controller utilizing .NET framework
 > - Live website Web Application [Car Insurance](https://carinsurancequotecalculatingapp.azurewebsites.net)
 > - Languages and frameworks used Front end- HTML, BootStrap4, CSS Back end- C# , SQL DataBase database first ADO.NET Entity model 
@@ -17,7 +16,6 @@
 
 
 > ## Twenty One Card Game Console App
-
 > - Fully functional twenty one card game 
 > - Languages and frameworks used Front end- HTML, BootStrap4, CSS Back end- C# , SQL DataBase with 
 > - utilizing inheritance, interfaces, polymorphism, SQL queries, StreamReader/Writer and more.
@@ -31,14 +29,12 @@
 
 
 > ### Comparison console app (_6ptConsoleApp) 
-
 > - Arrays and List put through multiple comparisons with loops and if statements
 > - string comparisons for equality 
 > - checking for duplicates
 > - restarting input questions if incorrect format
 
 > ### ShippingDimsAndQuoteApp Console App
-
 > - Takes in user input of box measurements
 > - Calcualtes cost based off of length, width and height
 > - Denies shipment if measurements to large
