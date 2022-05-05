@@ -15,15 +15,7 @@ namespace TwentyOne_Game
     {
         static void Main(string[] args)
         {
-            //DateTime yearOfBirth = new DateTime(1995,5,23,8,32,45); // this is a random date based off of params datetime = {5/23/1995 8:32:45 AM}
-            //DateTime yearOfGraduation = new DateTime(2007, 6, 4, 16, 34, 22);
-
-            //TimeSpan ageAtGrad = yearOfGraduation - yearOfBirth;  // this class is useful in datetime comparisons
-            //string text = "Here is some text.";
-            //File.WriteAllText(@"C:\Users\travi\OneDrive\Documents\ImportantNotes\UsingFileIOwriteTextToFileTWENTYONEGAME.txt",text); //this is how you write text to a selected file @ is full line escape character
-            //string cat = File.ReadAllText(@"C:\Users\travi\OneDrive\Documents\ImportantNotes\UsingFileIOwriteTextToFileTWENTYONEGAME.txt"); //this is how you read the text from a file
-            //Player newPlayer = new Player("Travis"); // used with constuctor chain
-            //Guid identifier = Guid.NewGuid();  // globally unique identifier
+            
             
             const string casinoName = "Grand Hotel and Casino"; //constants value can never be changed.
             Console.WriteLine("Welcome to the {0}.  Lets' start by telling me your name.", casinoName);
