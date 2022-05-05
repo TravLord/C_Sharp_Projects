@@ -9,7 +9,7 @@
 > - CRUD functionality
 > - While user is added to system, based off user inputs, an Insurance quote is calculated saved to the database & displayed to the view.
 
-### This project is currently a work in progress 
+> ### This project is currently a work in progress 
 > Future updates include:
 > - Adding CSS JQuery styling updates to navbar and styling 
 > - Additional class to track customer meta data
