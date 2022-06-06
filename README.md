@@ -5,7 +5,6 @@
 > - Model View Controller utilizing .NET framework
 > - Car Insurance user is directed to form to fill out information for a insurance quote.  Each input is evaluated for different factors.  These factors determine the cost rate of their monthly insurance quote. 
 > - After quote calculations complete the quote is calculated and saved to the Database.
-> - Live website Web Application [Car Insurance](https://carinsurancequotecalculatingapp.azurewebsites.net)
 > - Languages and frameworks used Front end- HTML, BootStrap4, CSS Back end- C# , SQL DataBase database first ADO.NET Entity model 
 > - CRUD functionality
 > - While user is added to system, based off user inputs, an Insurance quote is calculated saved to the database & displayed to the view.
