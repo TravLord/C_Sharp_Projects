@@ -1,7 +1,8 @@
 # To Do List App - C#, .NET, MVC, Entity Framework
 - ### Contents include:
 - A search bar 
-- Proper DateTime display to view
+- Bootstrap and personal CSS styling
+- Date of To do list entry 
 - A contact page with my info
 
 #### Future Version Updates will include:
