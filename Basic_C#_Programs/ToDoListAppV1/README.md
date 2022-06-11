@@ -1,7 +1,8 @@
 # To Do List App - C#, .NET, MVC, Entity Framework
 - ### Contents include:
 - A search bar 
-- Proper DateTime display
+- Proper DateTime display to view
+- A contact page with my info
 
 #### Future Version Updates will include:
 - Ability to filter each list by Name or date
