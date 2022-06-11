@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ToDoListApp.Models.ToDo>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="jumbotron jumbotron-fluid bg-primary mt-5 text-center" style="background-color:#90adc2">
+    <h1 class="">
+        To Do List
+    </h1>
+    <p class="te">Organize Your Day</p>
+    <button class="btn-lg btn-info btn-outline-secondary" data-toggle="modal">
+
+        @Html.ActionLink("Create New List Item", "Create", new { @class = "bg-primary" })
+
+    </button>
+</div>
+
+
+<form class="form-inline media-middle leftpush-index-todo">
+    <input class="form-control mr-sm-2" name="searchTerm" placeholder="Search by Name or Date" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Refresh</button>
+
+</form>
+
+
+
+<table class="table table-striped table-bordered bg-info">
+    <tr>
+        <th>
+            <p class="text-capitalize">To Do List</p>
+        </th>
+        <th>List Item Date</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ToDoListItem)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ItemDate)
+    </td>
+    
+
+    <td>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn" })
+            </button>
+
+            <button>
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn" })
+
+            </button>
+
+        </div>
+    </td>
+</tr>
+    }
+
+</table>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    })
+</script>
+
