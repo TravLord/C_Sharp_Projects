@@ -2,7 +2,7 @@
 - ### Contents include:
 - A search bar 
 - Bootstrap and personal CSS styling
-- Date of To do list entry 
+- Date of to do list entry 
 - A contact page with my info
 
 #### Future Version Updates will include:
