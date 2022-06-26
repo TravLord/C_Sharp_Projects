@@ -11,7 +11,7 @@
 
 > ### This project is currently a work in progress 
 > Future updates include:
-> - Adding CSS JQuery styling updates to navbar and styling 
+> - Adding CSS JQuery styling updates to navbar 
 > - Additional class to track customer meta data
 > - Will add images here to display webpages and user data
 
